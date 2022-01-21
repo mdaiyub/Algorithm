@@ -1,17 +1,18 @@
-def linearSearch(arr, key):
-    for i in range(len(arr)): 
-        if (arr[i] == key): 
-            return i 
-    return -1
+arr = list(map(int, input().split()))
+key = int(input())
 
-arr = [50, 90, 30, 70, 60]
-key = int(input('Enter what do you search: '))
+flag = 0
 
-index = linearSearch(arr, key)
-
-
-if (index == -1):
-    print(key, 'not Found')
+for i in range(len(arr)): 
+        if (arr[i] == key):
+            flag = 1
+            position = i
+            break
+        
+if flag == 1:
+    print("Item found at index:", position)
+    
 else:
-    print(key, 'Found at Index', index)
+    print("Item not Found.")
+
     
